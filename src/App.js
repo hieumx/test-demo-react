@@ -8,8 +8,10 @@ const App = () => {
 
     return ( <
         div className = "App" >
+
         <
         header className = "App-header" >
+
         <
         img src = { logo }
         className = "App-logo"
@@ -20,10 +22,12 @@ const App = () => {
         /p> <
         div > Count = { count } < /div> <
         button onClick = {
-            () => dispatch(increaseCounter()) } > Increase < /button> <
+            () => dispatch(increaseCounter())
+        } > Increase < /button> <
         button onClick = {
-            () => dispatch(decreaseCounter()) } > Decrease < /button> <
-        /header> <
+            () => dispatch(decreaseCounter())
+        } > Decrease < /button> < /
+        header > <
         /div>
     );
 }
