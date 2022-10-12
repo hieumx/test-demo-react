@@ -2,9 +2,9 @@ import React from "react";
 
 class AddUserInfor extends React.Component {
   state = {
-    name: "God",
+    name: "",
     address: "02 le quy don",
-    age: 35,
+    age: "",
   };
   // handleClick(event){
   //     console.log(">>> click me my button");
@@ -33,11 +33,12 @@ class AddUserInfor extends React.Component {
   handleOnSubmit = (event) => {
     event.preventDefault();
     this.props.handleAddNewUser({
-      id: Math.floor(Math.random() * 100 + 1) + "random",
-      name: "thanh ha",
-      age: "35",
+      id: Math.floor(Math.random() * 100 + 1) + "-random",
+      name: this.state.name,
+      age: this.state.age,
     });
   };
+
   render() {
     return (
       <div>
@@ -58,7 +59,6 @@ class AddUserInfor extends React.Component {
             type="text"
             onChange={(event) => this.handleOnChangeInput(event)}
           />
-          <button>Submit</button>
           <label htmlFor="">Your Age:</label>
           <input
             value={this.state.age}
